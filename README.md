@@ -1,9 +1,9 @@
 # you-got-frisked
---
+
 Completed by: Marvin L. Mills II
 
 # Key Question: Can we predict whether someone is frisked during a Terry Stop?
---
+
 
 <ul>
     <li>Is there bias in the stops made by police officers?</li>
@@ -13,7 +13,7 @@ Completed by: Marvin L. Mills II
 
 
 # Process (& Data Science Tools) Used:
---
+
 
 <ul>
     <li>Used the <i>Terry Stops dataset</i> provided by Data.gov, a publicly avaialable dataset, for cleaning, analyzing and modeling</li>
@@ -27,14 +27,14 @@ Completed by: Marvin L. Mills II
 
 
 # Findings:
---
+
 
 ### Evening/Overnight 911 Calls have the strongest presence in the dataset; ages 26-35 do as well.
 
 With more than 24,000 stops occurring in either the Evening or Overnight, this sheds light on the nature of the "Stops" most frequent in the dataset. It was also revealed that Calls with unreported reasoning have a strong presence, and individuals ages 26-35 were those most stopped during the Evening/Overnight times of day.
 
-![alt text](--- "Call-Type-Time-of-Day-Heatmap")
-![alt text](--- "Age-Group-Time-of-Day")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/call_type_and_time_of_day.JPG "Call-Type-Time-of-Day-Heatmap")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/time_of_day_with_age_group.JPG "Age-Group-Time-of-Day")
 
 
 ### Baseline model with significant class imbalance reveals high Accuracy score and low Recall, F1 and Precision scores
@@ -48,7 +48,7 @@ Using both scikit-learn's Dummy Classifier and K-nearest Neighbors, baseline Acc
 
 By increasing the test size over a range, the resulting Recall scores show a clear downward trend, from ~0.515 to ~0.485, for both training and test samples. Precision and F1 scores did not improve significantly, either, showing the limitation of SMOTE Data on performance.
 
-![alt text](--- "Logistic-Regression-SMOTE-Date-Results")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/log_reg_smote_analysis_recall_score.JPG "Logistic-Regression-SMOTE-Date-Results")
 
 
 
@@ -56,14 +56,14 @@ By increasing the test size over a range, the resulting Recall scores show a cle
 
 Achieved 72% Recall, 40% F1 and 28% Precision scores, with accuracy suffering and decreasing to 49%. 
 
-![alt text](--- "Final-Model-Random-Forests")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/final_model_scores_and_confusion_matrix.JPG "Final-Model-Random-Forests")
 
 
 ### Call Type (Not Reported) had the highest Feature Importance score, with 30% and 10%, respectively.
 
 With greater than 0.04 between "Call Type - Not Reported" and the next feature, it consistently proved to be the most important. The second most important feature was "Call Type - 911." These features competed with demographic data for individuals stopped as well.
 
-![alt text](--- "Feature-Importance-Graphic")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/feature_importance_random_forest.JPG "Feature-Importance-Graphic")
 
 
 #### The key adjustments made along the way:
@@ -76,7 +76,7 @@ With greater than 0.04 between "Call Type - Not Reported" and the next feature, 
 
 
 # Summary + Further Research:
---
+
 
 <ul>
     <li>The features engineered did not prove reliable for predicting whether an individual was frisked.</li>
