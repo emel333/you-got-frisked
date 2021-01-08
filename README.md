@@ -33,8 +33,8 @@ Completed by: Marvin L. Mills II
 
 With more than 24,000 stops occurring in either the Evening or Overnight, this sheds light on the nature of the "Stops" most frequent in the dataset. It was also revealed that Calls with unreported reasoning have a strong presence, and individuals ages 26-35 were those most stopped during the Evening/Overnight times of day.
 
-![alt text](https://github.com/emel333/you-got-frisked/blob/main/call_type_and_time_of_day.JPG "Call-Type-Time-of-Day-Heatmap")
-![alt text](https://github.com/emel333/you-got-frisked/blob/main/time_of_day_with_age_group.JPG "Age-Group-Time-of-Day")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/graphics/call_type_and_time_of_day.JPG "Call-Type-Time-of-Day-Heatmap")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/graphics/time_of_day_with_age_group.JPG "Age-Group-Time-of-Day")
 
 
 
@@ -42,7 +42,7 @@ With more than 24,000 stops occurring in either the Evening or Overnight, this s
 
 Using both scikit-learn's Dummy Classifier and K-nearest Neighbors, baseline Accuracy scores of 64.7% (Dummy classifier) and 72.9% (KNN) were established. F1, Recall and Precision scores were all below 25%. SMOTE data in response to increase presence of minority class, and focused on increasing Recall (True Positives) and Precision scores (True Positives / (True Positive + False Positive)).
 
-![alt text](https://github.com/emel333/you-got-frisked/blob/main/initial_baseline_model.JPG "Baseline-Model")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/graphics/initial_baseline_model.JPG "Baseline-Model")
 
 
 
@@ -50,7 +50,7 @@ Using both scikit-learn's Dummy Classifier and K-nearest Neighbors, baseline Acc
 
 By increasing the test size over a range, the resulting Recall scores show a clear downward trend, from ~0.515 to ~0.485, for both training and test samples. Precision and F1 scores did not improve significantly, either, showing the limitation of SMOTE Data on performance.
 
-![alt text](https://github.com/emel333/you-got-frisked/blob/main/log_reg_smote_analysis_recall_score.JPG "Logistic-Regression-SMOTE-Date-Results")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/graphics/log_reg_smote_analysis_recall_score.JPG "Logistic-Regression-SMOTE-Date-Results")
 
 
 
@@ -58,7 +58,7 @@ By increasing the test size over a range, the resulting Recall scores show a cle
 
 Achieved 70-72% Recall, 40-41% F1 and 28-29% Precision scores, with accuracy suffering and decreasing to 49-53%. 
 
-![alt text](https://github.com/emel333/you-got-frisked/blob/main/final_model_scores_and_confusion_matrix.JPG "Final-Model-Random-Forests")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/graphics/final_model_scores_and_confusion_matrix.JPG "Final-Model-Random-Forests")
 
 
 
@@ -66,7 +66,7 @@ Achieved 70-72% Recall, 40-41% F1 and 28-29% Precision scores, with accuracy suf
 
 With greater than 0.04 between "Call Type - Not Reported" and the next feature, it consistently proved to be the most important. The second most important feature was "Call Type - 911." These features competed with demographic data for individuals stopped as well.
 
-![alt text](https://github.com/emel333/you-got-frisked/blob/main/feature_importance_random_forest.JPG "Feature-Importance-Graphic")
+![alt text](https://github.com/emel333/you-got-frisked/blob/main/graphics/feature_importance_random_forest.JPG "Feature-Importance-Graphic")
 
 
 
